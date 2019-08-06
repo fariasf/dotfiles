@@ -48,14 +48,18 @@ default_orientation horizontal
 # -----------------------------------------------------------------------------
 
 # Start a terminal
+bindsym $mod+Return exec --no-startup-id rxvt-unicode -name 'rxvt'
 bindsym $mod+Control+n exec --no-startup-id rxvt-unicode -name 'rxvt'
 bindsym $mod+Control+b exec --no-startup-id rxvt-unicode -name 'rxvt-float'
 
 # Kill focused window
 bindsym $mod+Control+j kill
+bindsym $alt+F4 kill
+bindsym $mod+Shift+Q kill
 
 # Start program launcher
 bindsym $mod+space exec --no-startup-id rofi -show run
+bindsym $mod+d exec --no-startup-id rofi -show run
 
 # Navigate to the next/prev workspace
 bindsym $mod+Control+l workspace next
@@ -148,6 +152,7 @@ focus_on_window_activation focus
 
 # Reload the configuration file
 bindsym $mod+Control+c reload
+bindsym $mod+Shift+r reload
 
 # Restart i3 inplace (preserves your layout/session)
 bindsym $mod+Control+r restart
